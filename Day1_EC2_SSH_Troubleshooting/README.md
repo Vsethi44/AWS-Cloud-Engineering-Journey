@@ -65,4 +65,3 @@ ssh -i key-pair.pem ec2-user@<Public_IP>
 sudo journalctl -u sshd -n 50
 whoami
 hostname
->>>>>>> 7592b07 (Day1: EC2 SSH Troubleshooting documentation)
