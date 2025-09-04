@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# AWS-Troubleshooting-Labs
-=======
 # EC2 SSH Troubleshooting
 
 ## Problem Statement
