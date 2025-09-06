@@ -71,7 +71,7 @@ This broke admin access and could have caused extended downtime if not quickly i
 
 ## Commands Used (Reference)
 
-ssh -i key-pair.pem ec2-user@<Public_IP>
-sudo journalctl -u sshd -n 50
-whoami
-hostname
+- ssh -i key-pair.pem ec2-user@<Public_IP>
+- sudo journalctl -u sshd -n 50
+- whoami
+- hostname
