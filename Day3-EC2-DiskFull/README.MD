@@ -18,7 +18,10 @@ Impact: applications crash, updates fail, potential downtime.
 
 ### 1️⃣ Baseline Check
 
+**Commands**
+
 df -h
+
 lsblk
 
 - Explanation: df -h → human-readable disk usage; lsblk → shows partitions 
@@ -30,6 +33,8 @@ lsblk
 ---
 
 ### 2️⃣ Simulate Disk Full
+
+**Commands**
 
 sudo dd if=/dev/zero of=/var/log/fillfile bs=1M count=5000
 sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
@@ -45,6 +50,8 @@ sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 
 **Step 3A — Identify Large Files** 
 
+**Commands**
+
 sudo du -sh /var/log/*
 sudo du -sh /var/*
 
@@ -52,6 +59,8 @@ sudo du -sh /var/*
 ![Varlog Sizes](./screenshots/disk_varlog_sizes.png)
 
 **Step 3B — Cleanup Logs**
+
+**Commands**
 
 sudo truncate -s 0 /var/log/messages
 sudo truncate -s 0 /var/log/secure
