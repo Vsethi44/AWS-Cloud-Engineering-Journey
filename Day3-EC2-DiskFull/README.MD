@@ -20,9 +20,9 @@ Impact: applications crash, updates fail, potential downtime.
 
 **Commands**
 
-df -h
+- df -h
 
-lsblk
+- lsblk
 
 ## Explanation: 
 
