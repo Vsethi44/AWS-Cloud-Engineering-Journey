@@ -24,8 +24,12 @@ df -h
 
 lsblk
 
-- Explanation: df -h → human-readable disk usage; lsblk → shows partitions 
-- Expected Output: Current disk usage & partitions
+## Explanation: 
+
+- df -h → human-readable disk usage; 
+- lsblk → shows partitions 
+
+## Expected Output: Current disk usage & partitions
 
 ![Disk Baseline](./screenshots/disk_baseline_dfh.png)
 ![Partitions](./screenshots/disk_baseline_lsblk.png)
@@ -40,8 +44,9 @@ sudo dd if=/dev/zero of=/var/log/fillfile bs=1M count=5000
 
 sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 
-- Explanation: Fills disk with dummy files to trigger “No space left”
-- Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
+## Explanation: Fills disk with dummy files to trigger “No space left”
+
+## Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
 
 ![Disk After Fill](./screenshots/disk_after_fill_dfh.png)
 
