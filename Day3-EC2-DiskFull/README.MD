@@ -88,32 +88,32 @@ df -h
 
 ---
 
-⚠️ Special Note:
+## ⚠️ Special Note:
 
 - The **root volume of this EC2 instance** uses the **XFS filesystem** (not ext4).  
 - To expand the filesystem: `sudo xfs_growfs -d /`  
 - Do **not** use `resize2fs`, as it works only for ext4.
 
-❌ Error Observed
+## ❌ Error Observed
 
 - No space left on device
 
-🔍 Investigation
+## 🔍 Investigation
 
 - df -h → confirmed 100% usage
 - Checked /var/log → largest files
 
-🛑 Root Cause
+## 🛑 Root Cause
 
 - Log files + filler files exhausted root volume
 
-✅ Solution
+## ✅ Solution
 
 - Truncated & cleaned up logs
 - Expanded EBS volume (8 → 12 GB)
 - Verified disk space with df -h
 
-📊 Impact
+## 📊 Impact
 
 - Restored instance functionality
 - Practiced disk troubleshooting workflow
