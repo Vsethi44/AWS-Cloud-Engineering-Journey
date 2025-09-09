@@ -25,7 +25,8 @@ lsblk
 Explanation: df -h → human-readable disk usage; lsblk → shows partitions 
 Expected Output**: Current disk usage & partitions
 
-Screenshots**: disk_baseline_dfh.png, disk_baseline_lsblk.png
+![Disk Baseline](disk_baseline_dfh.png)
+![Partitions](disk_baseline_lsblk.png)
 
 ---
 
@@ -37,7 +38,7 @@ sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 Explanation: Fills disk with dummy files to trigger “No space left”
 Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
 
-Screenshot: disk_after_fill_dfh.png
+![Disk After Fill](disk_after_fill_dfh.png)
 
 ---
 
@@ -48,30 +49,31 @@ Screenshot: disk_after_fill_dfh.png
 sudo du -sh /var/log/*
 sudo du -sh /var/*
 
-Screenshot: disk_top_consumers.png, disk_varlog_sizes.png
+![Top Consumers](disk_top_consumers.png)
+![Varlog Sizes](disk_varlog_sizes.png)
 
 **Step 3B — Cleanup Logs**
 
 sudo truncate -s 0 /var/log/messages
 sudo truncate -s 0 /var/log/secure
 
-Screenshot: disk_after_cleanup_dfh.png
+![After Cleanup](disk_after_cleanup_dfh.png)
 
 ---
 
 ### 4️⃣ Expand EBS Volume (Optional)
 
-Before: ebs_volume_before.png → 8 GB root volume
+Before: ![EBS Volume Before](ebs_volume_before.png) – 8 GB root volume
 
-Modify via console: ebs_modify_volume_console.png → 12 GB
+Modify via console: ![EBS Modify Console](ebs_modify_volume_console.png) → 12 GB
 
-After: ebs_volume_after.png → confirmed 12 GB
+After: ![EBS Volume After](ebs_volume_after.png) – confirmed 12 GB → confirmed 12 GB
 
 Verify disk:
 
 df -h
 
-Screenshot: disk_after_expand_dfh.png
+![After Expand](disk_after_expand_dfh.png)
 
 ---
 
