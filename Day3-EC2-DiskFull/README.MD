@@ -23,10 +23,11 @@ df -h
 lsblk
 
 Explanation: df -h → human-readable disk usage; lsblk → shows partitions 
-Expected Output**: Current disk usage & partitions
 
-![Disk Baseline](disk_baseline_dfh.png)
-![Partitions](disk_baseline_lsblk.png)
+Expected Output: Current disk usage & partitions
+
+![Disk Baseline](./screenshots/disk_baseline_dfh.png)
+![Partitions](./screenshots/disk_baseline_lsblk.png)
 
 ---
 
