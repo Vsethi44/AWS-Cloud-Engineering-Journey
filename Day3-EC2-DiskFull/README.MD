@@ -19,12 +19,10 @@ Impact: applications crash, updates fail, potential downtime.
 ### 1️⃣ Baseline Check
 
 df -h
-
 lsblk
 
-Explanation: df -h → human-readable disk usage; lsblk → shows partitions 
-
-Expected Output: Current disk usage & partitions
+- Explanation: df -h → human-readable disk usage; lsblk → shows partitions 
+- Expected Output: Current disk usage & partitions
 
 ![Disk Baseline](./screenshots/disk_baseline_dfh.png)
 ![Partitions](./screenshots/disk_baseline_lsblk.png)
@@ -36,8 +34,8 @@ Expected Output: Current disk usage & partitions
 sudo dd if=/dev/zero of=/var/log/fillfile bs=1M count=5000
 sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 
-Explanation: Fills disk with dummy files to trigger “No space left”
-Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
+- Explanation: Fills disk with dummy files to trigger “No space left”
+- Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
 
 ![Disk After Fill](./screenshots/disk_after_fill_dfh.png)
 
@@ -64,13 +62,13 @@ sudo truncate -s 0 /var/log/secure
 
 ### 4️⃣ Expand EBS Volume (Optional)
 
-Before: ![EBS Volume Before](./screenshots/ebs_volume_before.png) – 8 GB root volume
+- Before: ![EBS Volume Before](./screenshots/ebs_volume_before.png) – 8 GB root volume
 
-Modify via console: ![EBS Modify Console](./screenshots/ebs_modify_volume_console.png) → 12 GB
+- Modify via console: ![EBS Modify Console](./screenshots/ebs_modify_volume_console.png) → 12 GB
 
-After: ![EBS Volume After](./screenshots/ebs_volume_after.png) – confirmed 12 GB → confirmed 12 GB
+- After: ![EBS Volume After](./screenshots/ebs_volume_after.png) – confirmed 12 GB → confirmed 12 GB
 
-Verify disk:
+- Verify disk:
 
 df -h
 
@@ -80,7 +78,7 @@ df -h
 
 ⚠️ Special Note:
 
-The **root volume of this EC2 instance** uses the **XFS filesystem** (not ext4).  
+- The **root volume of this EC2 instance** uses the **XFS filesystem** (not ext4).  
 - To expand the filesystem: `sudo xfs_growfs -d /`  
 - Do **not** use `resize2fs`, as it works only for ext4.
 
