@@ -79,11 +79,23 @@ sudo truncate -s 0 /var/log/secure
 
 ### 4️⃣ Expand EBS Volume (Optional)
 
-- Before: ![EBS Volume Before](./screenshots/ebs_volume_before.png) – 8 GB root volume
+## Before:  
 
-- Modify via console: ![EBS Modify Console](./screenshots/ebs_modify_volume_console.png) → 12 GB
+- 8 GB root volume
 
-- After: ![EBS Volume After](./screenshots/ebs_volume_after.png) – confirmed 12 GB → confirmed 12 GB
+ ![EBS Volume Before](./screenshots/ebs_volume_before.png) -
+
+## Modify via console:
+
+- increased to 12 GB
+
+ ![EBS Modify Console](./screenshots/ebs_modify_volume_console.png) - 
+
+## After: 
+
+- confirmed 12 GB
+
+![EBS Volume After](./screenshots/ebs_volume_after.png) – 
 
 - Verify disk:
 
