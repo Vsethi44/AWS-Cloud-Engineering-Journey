@@ -37,6 +37,7 @@ lsblk
 **Commands**
 
 sudo dd if=/dev/zero of=/var/log/fillfile bs=1M count=5000
+
 sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 
 - Explanation: Fills disk with dummy files to trigger “No space left”
@@ -53,6 +54,7 @@ sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 **Commands**
 
 sudo du -sh /var/log/*
+
 sudo du -sh /var/*
 
 ![Top Consumers](./screenshots/disk_top_consumers.png)
@@ -63,6 +65,7 @@ sudo du -sh /var/*
 **Commands**
 
 sudo truncate -s 0 /var/log/messages
+
 sudo truncate -s 0 /var/log/secure
 
 ![After Cleanup](./screenshots/disk_after_cleanup_dfh.png)
