@@ -97,7 +97,7 @@ sudo truncate -s 0 /var/log/secure
 
 ![EBS Volume After](./screenshots/ebs_volume_after.png) – 
 
-- Verify disk:
+## Verify disk:
 
 df -h
 
