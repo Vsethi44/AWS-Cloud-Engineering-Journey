@@ -39,7 +39,7 @@ sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 Explanation: Fills disk with dummy files to trigger “No space left”
 Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
 
-![Disk After Fill](disk_after_fill_dfh.png)
+![Disk After Fill](./screenshots/disk_after_fill_dfh.png)
 
 ---
 
@@ -50,31 +50,31 @@ Expected Error: dd: error writing '/var/log/fillfile2': No space left on device
 sudo du -sh /var/log/*
 sudo du -sh /var/*
 
-![Top Consumers](disk_top_consumers.png)
-![Varlog Sizes](disk_varlog_sizes.png)
+![Top Consumers](./screenshots/disk_top_consumers.png)
+![Varlog Sizes](./screenshots/disk_varlog_sizes.png)
 
 **Step 3B — Cleanup Logs**
 
 sudo truncate -s 0 /var/log/messages
 sudo truncate -s 0 /var/log/secure
 
-![After Cleanup](disk_after_cleanup_dfh.png)
+![After Cleanup](./screenshots/disk_after_cleanup_dfh.png)
 
 ---
 
 ### 4️⃣ Expand EBS Volume (Optional)
 
-Before: ![EBS Volume Before](ebs_volume_before.png) – 8 GB root volume
+Before: ![EBS Volume Before](./screenshots/ebs_volume_before.png) – 8 GB root volume
 
-Modify via console: ![EBS Modify Console](ebs_modify_volume_console.png) → 12 GB
+Modify via console: ![EBS Modify Console](./screenshots/ebs_modify_volume_console.png) → 12 GB
 
-After: ![EBS Volume After](ebs_volume_after.png) – confirmed 12 GB → confirmed 12 GB
+After: ![EBS Volume After](./screenshots/ebs_volume_after.png) – confirmed 12 GB → confirmed 12 GB
 
 Verify disk:
 
 df -h
 
-![After Expand](disk_after_expand_dfh.png)
+![After Expand](./screenshots/disk_after_expand_dfh.png)
 
 ---
 
