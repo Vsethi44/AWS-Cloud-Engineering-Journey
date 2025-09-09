@@ -40,9 +40,9 @@ Impact: applications crash, updates fail, potential downtime.
 
 **Commands**
 
-sudo dd if=/dev/zero of=/var/log/fillfile bs=1M count=5000
+- sudo dd if=/dev/zero of=/var/log/fillfile bs=1M count=5000
 
-sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
+- sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 
 ## Explanation: Fills disk with dummy files to trigger “No space left”
 
@@ -58,9 +58,9 @@ sudo dd if=/dev/zero of=/var/log/fillfile2 bs=1M count=3000
 
 **Commands**
 
-sudo du -sh /var/log/*
+- sudo du -sh /var/log/*
 
-sudo du -sh /var/*
+- sudo du -sh /var/*
 
 ![Top Consumers](./screenshots/disk_top_consumers.png)
 ![Varlog Sizes](./screenshots/disk_varlog_sizes.png)
@@ -69,9 +69,9 @@ sudo du -sh /var/*
 
 **Commands**
 
-sudo truncate -s 0 /var/log/messages
+- sudo truncate -s 0 /var/log/messages
 
-sudo truncate -s 0 /var/log/secure
+- sudo truncate -s 0 /var/log/secure
 
 ![After Cleanup](./screenshots/disk_after_cleanup_dfh.png)
 
@@ -99,7 +99,7 @@ sudo truncate -s 0 /var/log/secure
 
 ## Verify disk:
 
-df -h
+- df -h
 
 ![After Expand](./screenshots/disk_after_expand_dfh.png)
 
